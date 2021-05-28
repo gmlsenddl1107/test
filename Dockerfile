@@ -12,6 +12,6 @@ ENV TZ=Asia/Seoul
 
 COPY . /project
 
-RUN chmode +x /project/run.sh
+RUN pip3 install -r /project/requirements.txt
 
-ENTRYPOINT["/bin/bash","/project/run.sh"]
+ENTRYPOINT ["/bin/bash","/project/run.sh"]
